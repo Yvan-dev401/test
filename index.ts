@@ -37,7 +37,7 @@ MongoClient.connect(MONGO_URI, {
 // Middleware pour injecter la base de données dans les requêtes
 app.use((req, res, next) => {
   if (!db) {
-    return res.status(500).json({ message: "Base de données non connectée" });
+    return res.status(500).json({ message: "Base de données tsy connectée" });
   }
   req.db = db;
   next();
